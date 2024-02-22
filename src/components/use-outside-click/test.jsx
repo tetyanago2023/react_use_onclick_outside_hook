@@ -1,5 +1,6 @@
 import {useRef, useState} from "react";
 import useOutsideClick from "./index";
+import "./styles.css";
 
 const UseOnclickOutsideTest = () => {
     const [showContent, setShowContent] = useState(false);
@@ -10,11 +11,7 @@ const UseOnclickOutsideTest = () => {
         <div>
             {
                 showContent
-                    ? (<div ref={ref}
-                            style={{ border: '2px solid black',
-                                padding: '10px',
-                                background: "#008080",
-                                color: "#FFC300" }}>
+                    ? (<div ref={ref} className={"content-container"}>
                         <h1>This is a random content</h1>
                         <p>Click outside to hide content</p>
                     </div>)
